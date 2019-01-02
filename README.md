@@ -50,11 +50,12 @@ This portion shows the distribution of 3 labels "related", "request", "offer". T
     │   ├── disaster_categories.csv   # data to process
     │   ├── disaster_messages.csv     # data to process
     │   └── process_data.py
-    ├── draft_ipynb                   # notebooks for preparation)
-    │   ├── ETLPipelinePreparation.ipynb
+    ├── draft_ipynb                   # notebooks for preparation (ignore!)
+    │   ├── ETLPipelinePreparation.ipynb
     │   ├── ExploringMemo.ipynb
     │   ├── MLPipelinePreparation.ipynb
-    │   └── disasters.db
+    │   ├── disasters.db
+    |   └── clf.pkl
     └── models
         ├── classifier.pkl            # saved model
         └── train_classifier.py
