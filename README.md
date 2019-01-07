@@ -49,12 +49,19 @@ This portion shows the distribution of 3 labels "related", "request", "offer". T
     │   ├── DisasterResponse.db       # database to save clean data to
     │   ├── disaster_categories.csv   # data to process
     │   ├── disaster_messages.csv     # data to process
+<<<<<<< HEAD
     │   └── cleandata.py
     ├── draft_ipynb                   # notebooks for preparation)
     │   ├── ETLPipelinePreparation.ipynb
+=======
+    │   └── process_data.py
+    ├── draft_ipynb                   # notebooks for preparation (ignore!)
+    │   ├── ETLPipelinePreparation.ipynb
+>>>>>>> 02d0059174de0770a7f7334e21d2ccf0402c12fd
     │   ├── ExploringMemo.ipynb
     │   ├── MLPipelinePreparation.ipynb
-    │   └── disasters.db
+    │   ├── disasters.db
+    |   └── clf.pkl
     └── models
         ├── classifier.pkl            # saved model
         └── train_classifier.py
