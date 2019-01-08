@@ -75,7 +75,7 @@ def tokenize(text):
 
         """
         # remove stop words (This portion does not work...)
-        if clean_tok not in stopwords.words("english"):
+        if clean_tok not in set(stopwords.words("english")):
         """
         clean_tokens.append(clean_tok)
 
