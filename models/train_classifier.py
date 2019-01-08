@@ -19,8 +19,9 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split, GridSearchCV
 from sklearn.metrics import classification_report
 import pickle
+from nltk.corpus import stopwords
 
-nltk.download('wordnet')
+nltk.download(['wordnet','stopwords'])
 
 
 def load_data(database_filepath):
@@ -57,17 +58,25 @@ def tokenize(text):
 
     # remove punctuations in the sentences
     text = re.sub(r"[^a-zA-Z0-9]", " ", text)
+
     # split sentences into tokens(words) in a list
     tokens = word_tokenize(text)
 
     # instantiate lemmatizer
     lemmatizer = WordNetLemmatizer()
+
     # create list where lemmatized tokens would be stored
     clean_tokens = []
+
 
     # lemmatize each token and store it in the list "clean_tokens"
     for token in tokens:
         clean_tok = lemmatizer.lemmatize(token).lower().strip()
+
+        """
+        # remove stop words (This portion does not work...)
+        if clean_tok not in stopwords.words("english"):
+        """
         clean_tokens.append(clean_tok)
 
     return clean_tokens
