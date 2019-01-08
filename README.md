@@ -78,3 +78,11 @@ A csv file which contains real messages that were sent from people facing disast
 #### data/disaster_categories.csv
 
 A csv file which tells which types of information the messages contained (That does not mean that 1 message contains only 1 label of information. For example, it can be case that 1 messages contains 2 types of information, which are 'genres', 'offer', 'aid_related')
+
+#### data/cleandata.py
+
+A python file which cleans the data from 2 filed above and creates a cleaned data. This data is stored is stored in the database file designated.  
+
+#### models/train_claassifier.py
+
+A python file which creates a model to predict labels of the message. The best model is found by using the Grid Search of muiticlassifier whose estimators is Random Forest Classifiers. It takes more than 8 hours. The model is pickled in the pkl file designated.
